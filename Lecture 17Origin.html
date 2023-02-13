@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cascade of CSS</title>
+<link rel="stylesheet" href="external.css"> 
+<style>
+/*line 8 định dạng trang bằng liên kết ngoài
+line 11 định dạng color của đoạn văn bản đầu màu maroon đề lên định dạng liên kêt ngoài là white
+line 20 định dạng color của đoạn văn 2 màu đen đè lên định dạng liên kết ngoài
+Dù thay đổi về color nhưng những định dạng được thiết lập như background vẫn giữ nguyên
+=> những dòng lệnh phía sau sẽ được ưu tiên hơn dòng lệnh trước và đè lên 
+định dạng dòng lệnh trước và thay đổi những định dạng đã viết ban đầu*/
+p {
+  color: maroon;
+}
+
+</style>
+</head>
+<body>
+<h1>Origin Example</h1>
+<p>The rule is simple: last declaration wins.</p>
+<p style="color: black;">If there is no conflict, declarations merge into one rule.</p>
+</body>
+</html>
