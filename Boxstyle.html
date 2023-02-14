@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+    /*dấu sao đánh dấu phần quan trọng và được ưu tiên định dạng*/
+    /*border-box là định dạng sao cho đúng với kích thước đề ra width 300px*/
+
+* {
+  box-sizing: border-box;
+  /*Khi tạo trang ở trong body sẽ tự động tạo 1 cái Box mặc định do vậy để không bị ảnh hưởng quá trình thao tác ta nên sd 2 lệnh bên dưới*/
+  margin: 0;
+  padding: 0;
+}
+/*Ban đầu khong thấy nền màu blue vì nền green có cùng kích thước với blue và che phủ blue*/
+body {
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px;/*(top right bottom left) là phần nằm xung quanh văn bản*/
+  border: 5px solid black;
+  width: 300px;
+  height: 50px;
+  margin-top: 50px;/*viền của 2 box tiếp xúc nhau viền nào có kích thước lớn hơn thì win*/
+  overflow: auto;/*để văn bản không bị tràn ra ngoài khi thay đổi kích thước box*/
+}
+#content {
+  background-color: #90EE90; /* văn bản có nền màu green */
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+  </div>
+</div>
+
+
+</body>
+</html>
